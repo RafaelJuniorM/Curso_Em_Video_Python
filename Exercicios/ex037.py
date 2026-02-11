@@ -2,10 +2,10 @@
 # - Média abaixo de 5.0: REPROVADO
 # - Média entre 5.0 e 6.9: RECUPERAÇÃO
 # - Média 7.0 ou superior: APROVADO
-primeira_notqa = float(input("Digite a primeira nota: "))
+primeira_nota = float(input("Digite a primeira nota: "))
 segunda_nota = float(input("Digite a segunda nota: "))  
 
-media_nota = (primeira_notqa + segunda_nota) /2
+media_nota = (primeira_nota + segunda_nota) /2
 
 if media_nota < 5.0:
     print(f"\n Sua média é {media_nota:.1f} e você está REPROVADO \n")
@@ -15,3 +15,4 @@ elif media_nota >= 5.0 and media_nota <= 6.9:
 
 else:
     print(f"\n Sua média é {media_nota:.1f} e você está APROVADO \n")
+ 
