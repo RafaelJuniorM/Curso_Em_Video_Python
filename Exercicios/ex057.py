@@ -4,27 +4,22 @@
 
 primeiro_termo = int(input('Digite o primeiro termo da PA: '))
 razao  = int(input('Digite a razao da PA: '))
-
 termo = primeiro_termo
 cont = 1 
+total_termos = 0
+deseja_continuar = 10
 
-deseja_continuar = 1
 
-while cont <=10:
-    print(f'{termo}',end=' -> ')
-    termo += razao
-    cont += 1
-
-deseja_continuar = int(input(
-     ' \n Deseja mostrar mais termos? Se sim, informe a quantidade caso NÃO tecle [0]: '))
-
+print('-='*30)
 while deseja_continuar != 0:
-        while cont <= deseja_continuar:
-            print(f'{termo}',end=' -> ')
-            termo += razao
-            cont += 1
-      
+    total_termos += deseja_continuar
+    while cont <= total_termos:
+        print(f'{termo}',end=' -> ')
+        termo += razao
+        cont += 1
+
+    
+    deseja_continuar = int(input('Quantos termos voce deseja mostrar a mais? (Digite 0 para encerrar): '))
 print('Finalizado')
-
-
+print('-='*30)
 
