@@ -12,18 +12,18 @@ print("-="*30)
 
 
 while True:
-  
-
     num_jogador = int(input("Digite um numero inteiro para o jogo: "))
+    num_computador = randint(0,10)
+    
     escolha_jogador = str(input("Par ou Impar? [P/I]:")).strip().upper()[0]
     if escolha_jogador == "P":
         escolha_computador = "I"
-        print("Voce escolheu PAR, o computador ficou com IMPAR")
+        print(" \n \n Voce escolheu PAR, o computador ficou com IMPAR")
     else:
         escolha_computador = "P"
-        print("Voce escolheu IMPAR, o computador ficou com PAR")
+        print(" \n \n Voce escolheu IMPAR, o computador ficou com PAR")
 
-    num_computador = randint(0,10)
+    
     soma = num_jogador + num_computador
     par_ou_impar = soma % 2
 
@@ -38,8 +38,6 @@ while True:
             print("-="*30)
             vitorias_consecutivas += 1
 
-            print(" "*10+"A MAQUINA QUER UMA REVANCHE!!!  VAMOS NOVAMENTE!!!")
-            print("-="*30)
         else:
             print("-="*30)
             print(f"Voce jogou {num_jogador} e o computador jogou {num_computador}.")
@@ -59,8 +57,7 @@ while True:
             print("PARABENS!!! VOCE VENCEU!!!")
             print("-="*30)
 
-            print(" "*10+"A MAQUINA QUER UMA REVANCHE!!!  VAMOS NOVAMENTE!!!")
-            print("-="*30)
+          
             vitorias_consecutivas += 1
         else:
             print("-="*30)
@@ -70,6 +67,8 @@ while True:
             print("QUE PENA!!! VOCE PERDEU!!!")
             print("-="*30)
             break
+    print(" "*10+"A MAQUINA QUER UMA REVANCHE!!!  VAMOS NOVAMENTE!!!")
+    print("-="*30)
 
 if vitorias_consecutivas == 0:
     print("Voce nao venceu nenhuma vez, tente novamente!")
