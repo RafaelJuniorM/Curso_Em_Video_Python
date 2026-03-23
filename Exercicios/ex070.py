@@ -9,9 +9,11 @@ print(f'Os números digitados foram: {numero}')
 print(f"O numero 9 apareceu {numero.count(9)} vezes")
 
 if 3 in numero:
-    print(f"o numero 3 apareceu na posição {numero.index(3)}")
+    print(f"o numero 3 apareceu na posição {numero.index(3)+1}")
+
+print(f'Os valores pares digitados foram:')
 
 for elements in numero:
     if elements % 2 == 0:
-        print(f'Os números pares foram: {elements}')
-
+        print(elements, end=' ')
+        
