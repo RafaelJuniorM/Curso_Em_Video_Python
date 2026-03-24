@@ -11,6 +11,13 @@ print("Cheguei ao final da lista.")
 lista = []
 for cont in range(0, 5):
     lista.append(int(input("Digite um valor: ")))
-
+ 
 for c,v in enumerate(lista):
     print(f"Na posição {c} encontrei o valor {v}!")
+
+
+# .sort() => coloca em ordem crescente
+# .sort(reverse=True) => coloca em ordem decrescente
+#.insert(posição, valor) => insere um valor em uma posição específica
+#.pop() => remove o último valor da lista
+#.pop(posição) => remove o valor da posição específica
