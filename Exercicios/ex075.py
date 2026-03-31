@@ -7,8 +7,18 @@ valores = []
 
 for contador in range(0, 5):
     num = int(input("Digite um valor: "))
-    valores.append(num)
-    print(contador)
+    
+    if contador == 0 or num > valores[-1]:
+        print("Valor adicionando no final da lista")
+        valores.append(num)
+    else: 
+        posicao = 0 
+        while posicao < len(valores): 
+            if num <= valores[posicao]:
+                valores.insert(posicao, num)
+                print(f"Valor adicionado na posição {posicao} da lista")
+                break
+            posicao += 1    
 
 print("=-"*30)
 print(f"Os valores digitados foram {valores}")
